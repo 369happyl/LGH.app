@@ -1,142 +1,360 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>Mini Tutorial Python</title>
-  <style>
-    body {
-      font-family: 'Arial', sans-serif;
-      background: #1e1e1e;
-      color: #f5f5f5;
-      line-height: 1.6;
-      padding: 20px;
-    }
-    h1, h2 {
-      color: #00e0ff;
-    }
-    pre {
-      background: #2e2e2e;
-      padding: 10px;
-      border-radius: 8px;
-      overflow-x: auto;
-    }
-    button {
-      margin-top: 5px;
-      padding: 6px 12px;
-      border: none;
-      border-radius: 5px;
-      background: #00e0ff;
-      color: #000;
-      cursor: pointer;
-      font-weight: bold;
-    }
-    button:hover {
-      background: #00c4d6;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LGH hahaha</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #0f172a;
+            color: #e2e8f0;
+            line-height: 1.7;
+        }
+
+        header {
+            text-align: center;
+            padding: 70px 20px;
+            background: linear-gradient(135deg, #111827, #1e293b);
+            border-bottom: 1px solid #334155;
+        }
+
+        header h1 {
+            font-size: clamp(3rem, 10vw, 6rem);
+            color: #38bdf8;
+            letter-spacing: 5px;
+        }
+
+        header p {
+            color: #94a3b8;
+            font-size: 1.2rem;
+        }
+
+        main {
+            width: min(900px, 92%);
+            margin: 40px auto;
+        }
+
+        section {
+            background: #1e293b;
+            padding: 30px;
+            margin-bottom: 25px;
+            border-radius: 16px;
+            border: 1px solid #334155;
+        }
+
+        .hero {
+            border-left: 5px solid #38bdf8;
+        }
+
+        h2 {
+            color: #38bdf8;
+            margin-bottom: 15px;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        pre {
+            background: #020617;
+            padding: 20px;
+            border-radius: 10px;
+            overflow-x: auto;
+            margin: 20px 0;
+            border: 1px solid #334155;
+        }
+
+        code {
+            color: #7dd3fc;
+            font-family: monospace;
+        }
+
+        button {
+            background: #38bdf8;
+            color: #020617;
+            border: none;
+            padding: 12px 18px;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            filter: brightness(1.1);
+        }
+
+        button:active {
+            transform: translateY(0);
+        }
+
+        ul {
+            padding-left: 25px;
+        }
+
+        .resultado {
+            margin-top: 15px;
+            color: #4ade80;
+            font-weight: bold;
+        }
+
+        .desafio {
+            border-left: 5px solid #a78bfa;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #64748b;
+        }
+
+        @media (max-width: 600px) {
+            section {
+                padding: 20px;
+            }
+
+            header {
+                padding: 50px 15px;
+            }
+
+            pre {
+                font-size: 13px;
+            }
+        }
+    </style>
 </head>
+
 <body>
-  <h1>Mini Tutorial Python 🚀</h1>
 
-  <h2>1. Print</h2>
-  <p>O <code>print()</code> mostra algo no console:</p>
-  <pre>
-print("Olá, mundo!")</pre>
-  <button onclick="runExample('print')">Rodar exemplo</button>
-  <pre id="output-print"></pre>
+    <header>
+        <h1>LGH</h1>
+        <p>Aprenda JavaScript do zero 🚀</p>
+    </header>
 
-  <h2>2. Funções</h2>
-  <p>Funções executam blocos de código:</p>
-  <pre>
-def saudacao(nome):
-    return f"Olá, {nome}!"
-</pre>
-  <button onclick="runExample('function')">Rodar exemplo</button>
-  <pre id="output-function"></pre>
+    <main>
 
-  <h2>3. Lambdas</h2>
-  <p>Funções anônimas e curtas:</p>
-  <pre>
-dobro = lambda x: x * 2
-print(dobro(5))</pre>
-  <button onclick="runExample('lambda')">Rodar exemplo</button>
-  <pre id="output-lambda"></pre>
+        <section class="hero">
+            <h2>O que é JavaScript?</h2>
 
-  <h2>4. Classes</h2>
-  <p>Objetos com atributos e métodos:</p>
-  <pre>
-class Pessoa:
-    def __init__(self, nome):
-        self.nome = nome
-    def falar(self):
-        return f"Oi, meu nome é {self.nome}"</pre>
-  <button onclick="runExample('class')">Rodar exemplo</button>
-  <pre id="output-class"></pre>
+            <p>
+                JavaScript é uma linguagem de programação muito utilizada
+                para adicionar interatividade e comportamento às páginas da Web.
+            </p>
 
-  <h2>5. Módulos</h2>
-  <p>Reutilização de código em arquivos separados:</p>
-  <pre>
-# arquivo: meu_modulo.py
-def soma(a, b):
-    return a + b
-</pre>
-  <button onclick="runExample('module')">Rodar exemplo</button>
-  <pre id="output-module"></pre>
+            <p>
+                HTML cria a estrutura, CSS cuida da aparência
+                e JavaScript adiciona lógica e interatividade.
+            </p>
+        </section>
 
-  <h2>6. Tratamento de erros</h2>
-  <p>Evita que seu código quebre:</p>
-  <pre>
-try:
-    x = int("abc")
-except ValueError:
-    print("Erro: não é número!")</pre>
-  <button onclick="runExample('error')">Rodar exemplo</button>
-  <pre id="output-error"></pre>
 
-  <script>
-    function runExample(type) {
-      let output = "";
-      switch(type) {
-        case 'print':
-          output = "Olá, mundo!";
-          document.getElementById("output-print").innerText = output;
-          break;
-        case 'function':
-          function saudacao(nome){ return `Olá, ${nome}!`; }
-          output = saudacao("Lucas");
-          document.getElementById("output-function").innerText = output;
-          break;
-        case 'lambda':
-          let dobro = x => x*2;
-          output = dobro(5);
-          document.getElementById("output-lambda").innerText = output;
-          break;
-        case 'class':
-          class Pessoa {
-            constructor(nome){ this.nome = nome; }
-            falar(){ return `Oi, meu nome é ${this.nome}`; }
-          }
-          let p = new Pessoa("Lucas");
-          output = p.falar();
-          document.getElementById("output-class").innerText = output;
-          break;
-        case 'module':
-          function soma(a,b){ return a+b; }
-          output = soma(5,7);
-          document.getElementById("output-module").innerText = output;
-          break;
-        case 'error':
-          try{
-            let x = parseInt("abc");
-            if(isNaN(x)) throw "Erro: não é número!";
-            output = x;
-          } catch(e){
-            output = e;
-          }
-          document.getElementById("output-error").innerText = output;
-          break;
-      }
-    }
-  </script>
+        <section>
+            <h2>1. Variáveis</h2>
+
+            <p>
+                Variáveis armazenam informações que podem ser utilizadas
+                pelo programa.
+            </p>
+
+            <pre><code>let nome = "Lucas";
+let idade = 13;</code></pre>
+
+            <button onclick="mostrarVariavel()">
+                Executar exemplo
+            </button>
+
+            <p id="resultadoVariavel" class="resultado"></p>
+        </section>
+
+
+        <section>
+            <h2>2. Funções</h2>
+
+            <p>
+                Uma função é um bloco de código criado para realizar
+                uma determinada tarefa.
+            </p>
+
+            <pre><code>function dizerOla() {
+    alert("Olá!");
+}</code></pre>
+
+            <button onclick="dizerOla()">
+                Executar função
+            </button>
+        </section>
+
+
+        <section>
+            <h2>3. Condições</h2>
+
+            <p>
+                O JavaScript pode tomar decisões utilizando
+                <strong>if</strong> e <strong>else</strong>.
+            </p>
+
+            <pre><code>let idade = 18;
+
+if (idade >= 18) {
+    console.log("Maior de idade");
+} else {
+    console.log("Menor de idade");
+}</code></pre>
+
+            <button onclick="verificarIdade()">
+                Testar condição
+            </button>
+
+            <p id="resultadoIdade" class="resultado"></p>
+        </section>
+
+
+        <section>
+            <h2>4. Manipulando o HTML</h2>
+
+            <p>
+                JavaScript consegue acessar e modificar elementos
+                HTML através do DOM.
+            </p>
+
+            <pre><code>document.querySelector("#texto")
+    .textContent = "Texto alterado!";</code></pre>
+
+            <p id="texto">
+                Este texto pode ser alterado.
+            </p>
+
+            <button onclick="alterarTexto()">
+                Alterar texto
+            </button>
+        </section>
+
+
+        <section>
+            <h2>5. Eventos</h2>
+
+            <p>
+                Eventos são ações que acontecem na página,
+                como clicar em um botão ou pressionar uma tecla.
+            </p>
+
+            <ul>
+                <li><strong>click</strong> → quando algo é clicado</li>
+                <li><strong>input</strong> → quando um campo muda</li>
+                <li><strong>keydown</strong> → quando uma tecla é pressionada</li>
+                <li><strong>mouseover</strong> → quando o mouse passa sobre algo</li>
+            </ul>
+
+            <br>
+
+            <button id="botaoEvento">
+                Clique aqui
+            </button>
+
+            <p id="resultadoEvento" class="resultado"></p>
+        </section>
+
+
+        <section class="desafio">
+            <h2>🧠 Desafio</h2>
+
+            <p>
+                O que acontecerá quando esse código for executado?
+            </p>
+
+            <pre><code>let numero = 10;
+
+if (numero > 5) {
+    console.log("O número é maior que 5");
+}</code></pre>
+
+            <button onclick="executarDesafio()">
+                Ver resposta
+            </button>
+
+            <p id="respostaDesafio" class="resultado"></p>
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p>LGH © 2026, programado por lucas, o brabo </p>
+    </footer>
+
+
+    <script>
+
+        function mostrarVariavel() {
+
+            let nome = "Lucas";
+            let idade = 13;
+
+            document.querySelector("#resultadoVariavel").textContent =
+                `Nome: ${nome} | Idade: ${idade}`;
+        }
+
+
+        function dizerOla() {
+
+            alert("Olá! Você acabou de executar uma função JavaScript 🚀");
+        }
+
+
+        function verificarIdade() {
+
+            let idade = 13;
+
+            if (idade >= 18) {
+
+                document.querySelector("#resultadoIdade").textContent =
+                    "Você é maior de idade.";
+
+            } else {
+
+                document.querySelector("#resultadoIdade").textContent =
+                    "Você é menor de idade.";
+            }
+        }
+
+
+        function alterarTexto() {
+
+            document.querySelector("#texto").textContent =
+                "O JavaScript alterou este texto! ⚡";
+        }
+
+
+        const botao = document.querySelector("#botaoEvento");
+
+        botao.addEventListener("click", function () {
+
+            document.querySelector("#resultadoEvento").textContent =
+                "Você clicou no botão! Esse é um evento de click.";
+        });
+
+
+        function executarDesafio() {
+
+            document.querySelector("#respostaDesafio").textContent =
+                "10 é maior que 5. Portanto, a condição é verdadeira!";
+        }
+
+    </script>
+
 </body>
 </html>

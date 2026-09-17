@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>LGH hahaha</title>
+    <title>LGH</title>
 
     <style>
         * {
@@ -13,348 +12,249 @@
             padding: 0;
         }
 
-        html {
-            scroll-behavior: smooth;
-        }
-
         body {
             font-family: Arial, sans-serif;
-            background: #0f172a;
-            color: #e2e8f0;
-            line-height: 1.7;
+            min-height: 100vh;
+            background:
+                radial-gradient(circle at 20% 20%, #34345f, transparent 30%),
+                radial-gradient(circle at 80% 80%, #162f4d, transparent 30%),
+                #080812;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .app {
+            width: 100%;
+            max-width: 850px;
         }
 
         header {
-            text-align: center;
-            padding: 70px 20px;
-            background: linear-gradient(135deg, #111827, #1e293b);
-            border-bottom: 1px solid #334155;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
         }
 
-        header h1 {
-            font-size: clamp(3rem, 10vw, 6rem);
-            color: #38bdf8;
-            letter-spacing: 5px;
+        .logo {
+            font-size: 42px;
+            font-weight: 900;
+            letter-spacing: -3px;
         }
 
-        header p {
-            color: #94a3b8;
-            font-size: 1.2rem;
-        }
-
-        main {
-            width: min(900px, 92%);
-            margin: 40px auto;
-        }
-
-        section {
-            background: #1e293b;
-            padding: 30px;
-            margin-bottom: 25px;
-            border-radius: 16px;
-            border: 1px solid #334155;
+        .status {
+            padding: 8px 14px;
+            border: 1px solid #33334d;
+            border-radius: 30px;
+            font-size: 13px;
+            color: #aaa;
         }
 
         .hero {
-            border-left: 5px solid #38bdf8;
+            background: rgba(255,255,255,0.06);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 25px;
+            padding: 35px;
+            backdrop-filter: blur(15px);
+            margin-bottom: 18px;
         }
 
-        h2 {
-            color: #38bdf8;
+        .hero h1 {
+            font-size: clamp(35px, 7vw, 70px);
+            line-height: .95;
             margin-bottom: 15px;
         }
 
-        p {
+        .hero p {
+            color: #aaa;
+            font-size: 17px;
+            max-width: 550px;
+            line-height: 1.6;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+
+        .card {
+            min-height: 150px;
+            padding: 22px;
+            border-radius: 20px;
+            background: rgba(255,255,255,0.055);
+            border: 1px solid rgba(255,255,255,0.08);
+            transition: .2s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            background: rgba(255,255,255,0.09);
+        }
+
+        .emoji {
+            font-size: 30px;
             margin-bottom: 15px;
         }
 
-        pre {
-            background: #020617;
-            padding: 20px;
-            border-radius: 10px;
-            overflow-x: auto;
-            margin: 20px 0;
-            border: 1px solid #334155;
+        .card h2 {
+            font-size: 19px;
+            margin-bottom: 8px;
         }
 
-        code {
-            color: #7dd3fc;
-            font-family: monospace;
+        .card p {
+            color: #999;
+            font-size: 14px;
         }
 
         button {
-            background: #38bdf8;
-            color: #020617;
+            width: 100%;
+            margin-top: 18px;
+            padding: 17px;
             border: none;
-            padding: 12px 18px;
-            border-radius: 8px;
+            border-radius: 15px;
+            background: white;
+            color: #09090f;
+            font-size: 16px;
             font-weight: bold;
             cursor: pointer;
-            transition: 0.2s;
+            transition: .2s;
         }
 
         button:hover {
-            transform: translateY(-2px);
-            filter: brightness(1.1);
-        }
-
-        button:active {
-            transform: translateY(0);
-        }
-
-        ul {
-            padding-left: 25px;
-        }
-
-        .resultado {
-            margin-top: 15px;
-            color: #4ade80;
-            font-weight: bold;
-        }
-
-        .desafio {
-            border-left: 5px solid #a78bfa;
+            transform: scale(1.02);
         }
 
         footer {
             text-align: center;
-            padding: 30px;
-            color: #64748b;
+            color: #555;
+            font-size: 12px;
+            margin-top: 25px;
         }
 
-        @media (max-width: 600px) {
-            section {
-                padding: 20px;
+        @media (max-width: 650px) {
+            .grid {
+                grid-template-columns: 1fr;
             }
 
-            header {
-                padding: 50px 15px;
-            }
-
-            pre {
-                font-size: 13px;
+            .hero {
+                padding: 25px;
             }
         }
+    .portf {
+        margin:5px;
+        font-weight: bold;
+        font-size: 22px;
+    }
     </style>
 </head>
 
 <body>
 
+<div class="app">
+
     <header>
-        <h1>LGH</h1>
-        <p>Aprenda o js do zero </p>
+        <div class="logo">LGH brabo</div>
+        <div class="status">● online</div>
+         
     </header>
+     <div class="portf">slk portfolio kk</div>
+        
 
-    <main>
+    <section class="hero">
+        <h1>Uma coisa<br>aleatória.</h1>
 
-        <section class="hero">
-            <h2>O que é JavaScript?</h2>
+        <p id="frase">
+            Você não precisava abrir esse aplicativo.
+            Mas abriu. Agora já era.
+        </p>
 
-            <p>
-                JavaScript é uma linguagem de programação muito utilizada
-                para adicionar interatividade e comportamento às páginas da Web.
-            </p>
+        <button onclick="gerar()">GERAR ALEATORIEDADE</button>
+    </section>
 
-            <p>
-                HTML cria a estrutura, CSS cuida da aparência
-                e JavaScript adiciona lógica e interatividade.
-            </p>
-        </section>
+    <div class="grid">
 
+        <div class="card">
+            <div class="emoji">🧠</div>
+            <h2>Ideia</h2>
+            <p id="ideia">Pensar em algo completamente inesperado.</p>
+        </div>
 
-        <section>
-            <h2>1. Variáveis</h2>
+        <div class="card">
+            <div class="emoji">🔢</div>
+            <h2>Número</h2>
+            <p id="numero">42</p>
+        </div>
 
-            <p>
-                Variáveis armazenam informações que podem ser utilizadas
-                pelo programa.
-            </p>
+        <div class="card">
+            <div class="emoji">🌎</div>
+            <h2>Destino</h2>
+            <p id="destino">Amazonas</p>
+        </div>
 
-            <pre><code>let nome = "Jãozin";
-let idade = 13;</code></pre>
-
-            <button onclick="mostrarVariavel()">
-                Executar exemplo
-            </button>
-
-            <p id="resultadoVariavel" class="resultado"></p>
-        </section>
-
-
-        <section>
-            <h2>2. Funções</h2>
-
-            <p>
-                Uma função é um bloco de código criado para realizar
-                uma determinada tarefa.
-            </p>
-
-            <pre><code>function dizerOla() {
-    alert("Olá!");
-}</code></pre>
-
-            <button onclick="dizerOla()">
-                Executar função
-            </button>
-        </section>
-
-
-        <section>
-            <h2>3. Condições</h2>
-
-            <p>
-                O JavaScript pode tomar decisões utilizando
-                <strong>if</strong> e <strong>else</strong>.
-            </p>
-
-            <pre><code>let idade = 18;
-
-if (idade >= 18) {
-    console.log("Maior de idade");
-} else {
-    console.log("Menor de idade");
-}</code></pre>
-
-            <button onclick="verificarIdade()">
-                Testar condição
-            </button>
-
-            <p id="resultadoIdade" class="resultado"></p>
-        </section>
-
-
-        <section>
-            <h2>4. Manipulando o HTML</h2>
-
-            <p>
-                JavaScript consegue acessar e modificar elementos
-                HTML através do DOM.
-            </p>
-
-            <pre><code>document.querySelector("#texto")
-    .textContent = "Texto alterado!";</code></pre>
-
-            <p id="texto">
-                Este texto pode ser alterado.
-            </p>
-
-            <button onclick="alterarTexto()">
-                Alterar texto
-            </button>
-        </section>
-
-
-        <section>
-            <h2>5. Eventos</h2>
-
-            <p>
-                Eventos são ações que acontecem na página,
-                como clicar em um botão ou pressionar uma tecla.
-            </p>
-
-            <ul>
-                <li><strong>click</strong> → quando algo é clicado</li>
-                <li><strong>input</strong> → quando um campo muda</li>
-                <li><strong>keydown</strong> → quando uma tecla é pressionada</li>
-                <li><strong>mouseover</strong> → quando o mouse passa sobre algo</li>
-            </ul>
-
-            <br>
-
-            <button id="botaoEvento">
-                Clique aqui
-            </button>
-
-            <p id="resultadoEvento" class="resultado"></p>
-        </section>
-
-
-        <section class="desafio">
-            <h2>🧠 Desafio</h2>
-
-            <p>
-                O que acontecerá quando esse código for executado?
-            </p>
-
-            <pre><code>let numero = 10;
-
-if (numero > 5) {
-    console.log("O número é maior que 5");
-}</code></pre>
-
-            <button onclick="executarDesafio()">
-                Ver resposta
-            </button>
-
-            <p id="respostaDesafio" class="resultado"></p>
-        </section>
-
-    </main>
-
+    </div>
 
     <footer>
-        <p>LGH © 2026, programado por LGHA, o brabo </p>
+        LGH — laboratório de coisas que provavelmente não precisavam existir.
     </footer>
 
+</div>
 
-    <script>
+<script>
+    const frases = [
+        "Hoje é um ótimo dia para fazer algo estranho.",
+        "Talvez você devesse aprender alguma coisa nova.",
+        "O universo continua funcionando. Impressionante.",
+        "Você acabou de gastar alguns segundos lendo isso.",
+        "Uma ideia aleatória pode virar um projeto.",
+        "Não existe motivo. E esse é o motivo.",
+        "mas talvez isso nao seja inutil",
+        "juro que isso foi aleatorio",
+        "por que você ainda está aqui?",
+        "o que ce ta fazendo aqui ainda?",
+        "você esta sozinho?",
+        "o que você esta fazendo agora?",
+        "por que voce é o que voce é?"
+        
+    ];
 
-        function mostrarVariavel() {
+    const ideias = [
+        "Criar uma linguagem de programação.",
+        "Fazer um jogo que ninguém pediu.",
+        "Criar um site que muda sozinho.",
+        "Inventar uma palavra nova.",
+        "Programar uma IA completamente inútil.",
+        "Criar um aplicativo dentro de outro aplicativo."
+    ];
 
-            let nome = "jãozin";
-            let idade = 13;
+    const destinos = [
+        "Brasil", "Índia", "China", "Estados Unidos", "Japão", "Alemanha", "França", "Reino Unido", "Itália", "Canadá", 
+    "Austrália", "Rússia", "África do Sul", "México", "Argentina", "Espanha", "Portugal", "Holanda", "Suécia", "Suíça",
+    "Egito", "Nigéria", "Quênia", "Coreia do Sul", "Indonésia", "Nova Zelândia", "Grécia", "Turquia", "Arábia Saudita",
+    "Colômbia", "Angola", "Moçambique", "Cabo Verde", "Guiné-Bissau", "São Tomé e Príncipe", "Timor-Leste", "Bélgica", 
+    "Áustria", "Dinamarca", "Noruega", "Finlândia", "Irlanda", "Polônia", "República Tcheca", "Hungria", "Romênia",
+    "Ucrânia", "Croácia", "Uruguai", "Chile", "Peru", "Equador", "Venezuela", "Bolívia", "Paraguai", "Cuba", "Jamaica", 
+    "Costa Rica", "Panamá", "Guatemala", "Honduras", "El Salvador", "Nicarágua", "República Dominicana", "Canadá", "Marrocos",
+    "Argélia", "Tunísia", "Líbia", "Gana", "Senegal", "Camarões", "Costa do Marfim", "Madagascar", "Etiópia", "Tanzânia", "Uganda",
+    "Zâmbia", "Zimbábue", "Irã", "Iraque", "Israel", "Palestina", "Jordânia", "Líbano", "Síria", "Emirados Árabes Unidos", "Catar",
+    "Coveite", "Omã", "Paquistão", "Bangladesh", "Tailândia", "Vietnã", "Filipinas", "Malásia", "Singapura", "Ucrânia", "Cazaquistão",
+    "Mongólia"
+    ];
 
-            document.querySelector("#resultadoVariavel").textContent =
-                `Nome: ${nome} | Idade: ${idade}`;
-        }
+    function aleatorio(lista) {
+        return lista[Math.floor(Math.random() * lista.length)];
+    }
 
-
-        function dizerOla() {
-
-            alert("eai cê acabou de executar uma função JavaScript ");
-        }
-
-
-        function verificarIdade() {
-
-            let idade = 13;
-
-            if (idade >= 18) {
-
-                document.querySelector("#resultadoIdade").textContent =
-                    "Você é maior de idade.";
-
-            } else {
-
-                document.querySelector("#resultadoIdade").textContent =
-                    "Você é menor de idade.";
-            }
-        }
-
-
-        function alterarTexto() {
-
-            document.querySelector("#texto").textContent =
-                "O js mudou esse texto!";
-        }
-
-
-        const botao = document.querySelector("#botaoEvento");
-
-        botao.addEventListener("click", function () {
-
-            document.querySelector("#resultadoEvento").textContent =
-                "Você clicou no botão! Esse é um evento de click.";
-        });
-
-
-        function executarDesafio() {
-
-            document.querySelector("#respostaDesafio").textContent =
-                "10 é maior que 5. ent, a condição é verdadeira mn";
-        }
-
-    </script>
+    function gerar() {
+        document.getElementById("frase").textContent = aleatorio(frases);
+        document.getElementById("ideia").textContent = aleatorio(ideias);
+        document.getElementById("numero").textContent =
+            Math.floor(Math.random() * 9999) + 1;
+        document.getElementById("destino").textContent = aleatorio(destinos);
+    }
+</script>
 
 </body>
 </html>
